@@ -6,7 +6,6 @@
  *
  * Looks for Emails and automatically obfuscates them.
  *
- * Based on the Soundcloud Embedding Textformatter by Conclurer / Marvin Scharle
  *
  * ProcessWire 3.x
  * Copyright (C) 2018 by Tomas Kostadinov / Conclurer GmbH
