@@ -44,7 +44,6 @@ class TextformatterEmailObfuscator extends Textformatter implements Configurable
 			if (strpos($match, 'mailto') === false) {
 				$str = str_replace($match, "<script>document.write(decryptAndReturn('" . $this->encryptEmail($match) . "'))</script>", $str);
 			} else {
-				var_dump($match);
 				$str = str_replace($match, "javascript:decryptAndOpen('" . $this->encryptEmail($match) . "')", $str);
 			}
 		}
@@ -57,7 +56,7 @@ class TextformatterEmailObfuscator extends Textformatter implements Configurable
 	public static function getModuleConfigInputfields(array $data) {
 		$inputfields = new InputfieldWrapper();
 		$f = wire('modules')->get('InputfieldTextarea');
-		$f->attr('value', '<?php $module = $modules->getModule(\"TextformatterEmailObfuscator\"); echo $module->renderJS();?>');
+		$f->attr('value', '<?php $module = $modules->getModule("TextformatterEmailObfuscator"); echo $module->renderJS();?>');
 		$f->label = "Code for obfuscation";
 		$f->description = "Add this code to your layout file to automatically add the needed js files.";
 		$inputfields->add($f);
