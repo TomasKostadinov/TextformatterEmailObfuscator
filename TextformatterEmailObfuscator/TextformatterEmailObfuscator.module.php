@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ProcessWire Mixcloud Embedding Textformatter
+ * ProcessWire Email Obfuscating Textformatter
  * Copyright (c) 2017 by Conclurer GmbH / Tomas Kostadinov
  *
  * Looks for Emails and automatically obfuscates them.
