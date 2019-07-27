@@ -28,6 +28,8 @@ class TextformatterEmailObfuscator extends Textformatter implements Configurable
 	 * Text formatting function as used by the Textformatter interface
 	 */
 	public function format(&$str) {
+		// check if module call is in admin
+		if (wire('page')->rootParent->id == 2) return;
 		$this->searchMail($str, $this->get("code"));
 	}
 
